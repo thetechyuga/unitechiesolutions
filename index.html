@@ -4843,16 +4843,15 @@
                                                                     data-widget_type="image.default">
                                                                     <div class="elementor-widget-container">
                                                                         <a href="index.html">
-                                                                            <img 
-                                                                                fetchpriority="high" 
-                                                                                width="400" 
-                                                                                height="138" 
-                                                                                src="UTS - LOGO/2.jpg" 
-                                                                                alt="Unitechie Solutions Logo" 
-                                                                                class="attachment-large size-large"
-                                                                            />
+                                                                            <img fetchpriority="high" width="400"
+                                                                                style="max-height: 100px;width: 100%;"
+                                                                                height="138"
+                                                                                src="Transparent/4.png"
+                                                                                class="attachment-large size-large wp-image-85848"
+                                                                                alt="UTS logo"
+                                                                                srcset="Transparent/4.png 400w, Transparent/5.png 300w"
+                                                                                sizes="(max-width: 400px) 100vw, 400px" />
                                                                         </a>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -5836,11 +5835,12 @@
                                                                     <div class="elementor-widget-container">
                                                                         <a href="index.html">
                                                                             <img fetchpriority="high" width="400"
+                                                                                style="max-height: 100px;width: 100%;"                                                                            
                                                                                 height="138"
-                                                                                src="wp-content/uploads/2024/11/ozrit.avif"
+                                                                                src="Transparent/4.png"
                                                                                 class="attachment-large size-large wp-image-85848"
                                                                                 alt="UTS logo"
-                                                                                srcset="https://ozrit.com/wp-content/uploads/2024/11/ozrit.avif 400w, https://ozrit.com/wp-content/uploads/2024/11/ozrit-300x104.avif 300w"
+                                                                                srcset="Transparent/4.png 400w, Transparent/5.png 300w"
                                                                                 sizes="(max-width: 400px) 100vw, 400px" />
                                                                         </a>
                                                                     </div>
@@ -6831,70 +6831,58 @@
                                 <div class="pxl-entry-content clearfix">
                                     <div data-elementor-type="wp-page" data-elementor-id="17"
                                         class="elementor elementor-17" data-elementor-post-type="page">
-                                        <section
-                                            class="elementor-section elementor-top-section elementor-element elementor-element-3d258e3 elementor-section-boxed elementor-section-height-default elementor-section-height-default pxl-row-scroll-none pxl-zoom-point-false pxl-section-overflow-visible pxl-section-fix-none pxl-bg-color-none pxl-section-overlay-none"
-                                            data-id="3d258e3" data-element_type="section" id="back-to-top">
+                                        <section id="hero-banner" style="position:relative; width:100%; height:100vh; overflow:hidden; background-color:#000; font-family:'Segoe UI',sans-serif;">
+  <!-- Background GIF -->
+  <img src="wp-content/uploads/2025/06/tech-hud-particles.gif"
+       alt="Tech animated background"
+       style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter: brightness(0.4) blur(0.5px); z-index:1;" />
+
+  <!-- Central Banner Text -->
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); text-align:center; color:#fff; z-index:2; width:90%; max-width:1000px;">
+    <h1 id="hero-text" style="font-size:4rem; font-weight:700; opacity:0; text-shadow: 0 0 20px rgba(0,0,0,0.8); animation:fadeIn 1s ease forwards;">
+      UNITECHIE SOLUTIONS
+    </h1>
+  </div>
+
+  <!-- Fade Keyframe & Responsiveness -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity:0; transform:translateY(20px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    @media(max-width:768px) { #hero-text { font-size:2.5rem; } }
+  </style>
+
+  <!-- Text Rotation Script -->
+  <script>
+    const phrases = [
+      "With 7+ years of excellence, UTS builds tomorrow’s technology.",
+      "Crafting scalable AI-powered web & mobile solutions.",
+      "Trusted by 1500+ clients — designed with precision.",
+      "Innovating digital transformation with human-centered design."
+    ];
+    const el = document.getElementById('hero-text');
+    let i = 0;
+    function rotate() {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.textContent = phrases[i];
+        el.style.animation = 'none';
+        void el.offsetWidth;
+        el.style.animation = 'fadeIn 1s ease forwards';
+        i = (i + 1) % phrases.length;
+      }, 500);
+    }
+    rotate();
+    setInterval(rotate, 4000);
+  </script>
+</section>
 
 
-                                            <div class="elementor-container elementor-column-gap-default ">
-                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-88f6405 pxl-column-none pxl-column-overflow-hidden-no"
-                                                    data-id="88f6405" data-element_type="column">
-                                                    <div class="elementor-widget-wrap elementor-element-populated">
 
-                                                        <div class="elementor-element elementor-element-9a0ace0 elementor-widget elementor-widget-slider_revolution"
-                                                            data-id="9a0ace0" data-element_type="widget"
-                                                            data-widget_type="slider_revolution.default">
-                                                            <div class="elementor-widget-container">
 
-                                                                <div class="wp-block-themepunch-revslider">
-                                                                    <p class="rs-p-wp-fix"></p>
-                                                                    <sr7-module data-alias="ai-particle-cluster"
-                                                                        data-id="1" id="SR7_1_1"
-                                                                        class="rs-respect-topbar" data-version="6.7.34">
-                                                                        <sr7-adjuster></sr7-adjuster>
-                                                                        <sr7-content>
-                                                                            <sr7-slide id="SR7_1_1-1" data-key="1">
-                                                                                <sr7-txt id="SR7_1_1-1-1"
-                                                                                    class="sr7-layer">With 16 years of
-                                                                                    industry expertise and a dedicated
-                                                                                    team of over 500 professionals,
-                                                                                    UTS specializes in developing
-                                                                                    AI-driven Web and Mobile
-                                                                                    applications that drive business
-                                                                                    success.</sr7-txt>
-                                                                                <sr7-txt id="SR7_1_1-1-5"
-                                                                                    class="sr7-layer">Building
-                                                                                    Applications that Drive Success with
-                                                                                    Precision</sr7-txt>
-                                                                                <sr7-txt id="SR7_1_1-1-6"
-                                                                                    class="sr7-layer">3K+</sr7-txt>
-                                                                                <sr7-txt id="SR7_1_1-1-8"
-                                                                                    class="sr7-layer">Clients</sr7-txt>
-                                                                                <sr7-txt id="SR7_1_1-1-11"
-                                                                                    class="sr7-layer">2.5k+</sr7-txt>
-                                                                                <sr7-txt id="SR7_1_1-1-12"
-                                                                                    class="sr7-layer">Projects</sr7-txt>
-                                                                                <sr7-txt id="SR7_1_1-1-14"
-                                                                                    class="sr7-layer">4.9</sr7-txt>
-                                                                                <sr7-txt id="SR7_1_1-1-15"
-                                                                                    class="sr7-layer">User
-                                                                                    Rating</sr7-txt>
-                                                                            </sr7-slide>
-                                                                            <sr7-slide id="SR7_1_1-4" data-key="4">
-                                                                            </sr7-slide>
-                                                                        </sr7-content>
-                                                                    </sr7-module>
-                                                                    <script>
-                                                                        SR7.PMH ??= {}; SR7.PMH["SR7_1_1"] = { cn: 100, state: false, fn: function () { if (_tpt !== undefined && _tpt.prepareModuleHeight !== undefined) { _tpt.prepareModuleHeight({ id: "SR7_1_1", el: [800, 667, 960, 920], type: 'standard', shdw: '0', gh: [800, 668, 960, 920], gw: [1920, 1024, 778, 480], vpt: ['-200px'], size: { fullWidth: true, fullHeight: false }, mh: '0', onh: 0, onw: 0, bg: { color: 'transparent' } }); SR7.PMH["SR7_1_1"].state = true; } else if (SR7.PMH["SR7_1_1"].cn-->0) setTimeout(SR7.PMH["SR7_1_1"].fn, 19); } }; SR7.PMH["SR7_1_1"].fn();
-                                                                    </script>
-                                                                </div>
 
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
+
                                         <section
                                             class="elementor-section elementor-top-section elementor-element elementor-element-449f303 elementor-section-stretched elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default pxl-row-scroll-none pxl-zoom-point-false pxl-section-overflow-visible pxl-section-fix-none pxl-bg-color-none pxl-section-overlay-none"
                                             data-id="449f303" data-element_type="section"
@@ -6983,8 +6971,7 @@
                                                                                                 data-wow-delay="ms">
 
 
-                                                                                                Empowering Businesses
-                                                                                                with Custom Solutions
+                                                                                                Elevating Enterprises via Customized Technology
 
                                                                                             </h3>
                                                                                         </div>
@@ -6999,18 +6986,8 @@
                                                                                 <div class="pxl-text-editor">
                                                                                     <div class="pxl-item--inner "
                                                                                         data-wow-delay="ms">
-                                                                                        <p>At UTS, we specialize in
-                                                                                            crafting innovative
-                                                                                            applications and software
-                                                                                            that help businesses thrive
-                                                                                            in a digital-first world.
-                                                                                        </p>
-                                                                                        <p>Our solutions are tailored to
-                                                                                            meet your unique needs,
-                                                                                            driving growth, efficiency,
-                                                                                            and lasting success through
-                                                                                            cutting-edge technology and
-                                                                                            expert execution</p>
+                                                                                        <p>UTS specializes in delivering innovative software and applications that enable businesses to excel in a digital-first environment.</p> 
+                                                                                        <p>We provide tailored solutions designed to optimize growth, improve efficiency, and ensure long-term success through cutting-edge technology and expert execution.</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -7048,7 +7025,7 @@
                                                                                 data-wow-delay="ms">
 
 
-                                                                                Software Engineering, Consulting &#038;
+                                                                                Software Solutions, Consulting &#038;
                                                                                 Outsourcing
 
                                                                             </h3>
@@ -7063,11 +7040,7 @@
                                                             <div class="elementor-widget-container">
                                                                 <div class="pxl-text-editor">
                                                                     <div class="pxl-item--inner " data-wow-delay="ms">
-                                                                        <p>We are an award-winning and Top Web
-                                                                            Development Company company specializing in
-                                                                            outsourced software development and
-                                                                            dedicated engineering teams for clients
-                                                                            worldwide</p>
+                                                                        <p>Recognized for excellence, we deliver expert web development services and offer outsourced software solutions along with committed engineering teams to partners across the globe.</p>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -8675,13 +8648,8 @@
                                                                                         <div id="pxl_accordion-255c845-1894-f2e32bd"
                                                                                             class="pxl-accordion--content"
                                                                                             style="display: block;">
-                                                                                            We offer end-to-end
-                                                                                            solutions in custom software
-                                                                                            development, mobile &amp;
-                                                                                            web app development, AI
-                                                                                            &amp; ML integration, UI/UX
-                                                                                            design, digital marketing,
-                                                                                            and cloud consulting </div>
+                                                                                                    UTS delivers end-to-end technology solutions, including custom software development, AI-powered web and mobile apps, cloud consulting, UI/UX design, automation, and digital transformation services.
+                                                                                        </div>
                                                                                     </div>
                                                                                     <div class="pxl--item ">
                                                                                         <h5 class="pxl-accordion--title"
@@ -8695,10 +8663,10 @@
                                                                                         </h5>
                                                                                         <div id="pxl_accordion-255c845-1894-ed4bfbd"
                                                                                             class="pxl-accordion--content">
-                                                                                            Founded in 2009, UTS
-                                                                                            brings over 16 years of
+                                                                                            Founded in 2018, UTS
+                                                                                            brings over 7 years of
                                                                                             experience and a team of
-                                                                                            500+ professionals to every
+                                                                                            100+ professionals to every
                                                                                             project. </div>
                                                                                     </div>
                                                                                     <div class="pxl--item ">
@@ -8714,14 +8682,9 @@
                                                                                         </h5>
                                                                                         <div id="pxl_accordion-255c845-1894-ea8a062"
                                                                                             class="pxl-accordion--content">
-                                                                                            Our experts work with
-                                                                                            Laravel, Node.js, React,
-                                                                                            Flutter, Python
-                                                                                            (Django/Flask),
-                                                                                            TensorFlow/PyTorch, AWS,
-                                                                                            Azure, and popular CMS
-                                                                                            platforms like WordPress and
-                                                                                            Drupal. </div>
+                                                                                            Our team excels in modern technologies like React, Flutter, Node.js, Laravel, and Python frameworks (Django, Flask), along with AI/ML platforms like TensorFlow and PyTorch, and cloud services via AWS and Azure.
+
+                                                                                            </div>
                                                                                     </div>
                                                                                     <div class="pxl--item ">
                                                                                         <h5 class="pxl-accordion--title"
@@ -8736,13 +8699,9 @@
                                                                                         </h5>
                                                                                         <div id="pxl_accordion-255c845-1894-a9e29d5"
                                                                                             class="pxl-accordion--content">
-                                                                                            We combine deep technical
-                                                                                            expertise with a
-                                                                                            client-centric
-                                                                                            approach—ensuring scalable,
-                                                                                            future-ready solutions
-                                                                                            delivered on time and on
-                                                                                            budget. </div>
+                                                                                                   UTS stands out through its fusion of cutting-edge tech expertise and a truly client-first approach—delivering scalable, precise, and future-ready solutions that are always aligned with business goals.
+
+                                                                                            </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -8782,8 +8741,7 @@
                                                                                             <div class="content_panel--textContent--uGoXz common--well--J0WtH"
                                                                                                 dir="auto"
                                                                                                 data-testid="textContent">
-                                                                                                Innovating Today for
-                                                                                                Tomorrow</div>
+                                                                                               Pioneering Innovation for a Better Tomorrow</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -9021,8 +8979,8 @@
                                                                                 data-wow-delay="ms">
 
 
-                                                                                Trusted BY 3000+ Happy Clients,
-                                                                                Including Fortune 500 Companies
+                                                                                Trusted BY 1500+ Happy Clients,
+                                                                                Including Fortune 100 Companies
 
                                                                             </h3>
                                                                         </div>
