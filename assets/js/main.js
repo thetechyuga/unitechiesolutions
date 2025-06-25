@@ -231,3 +231,78 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+// Contact Form Submission Script
+// document.getElementById("contact-form").addEventListener("submit", async function (e) {
+//   e.preventDefault();
+
+//   const form = e.target;
+//   const loading = document.getElementById("loading");
+//   const sentMessage = document.getElementById("sent-message");
+//   const errorMessage = document.getElementById("error-message");
+
+//   loading.style.display = "block";
+//   sentMessage.style.display = "none";
+//   errorMessage.style.display = "none";
+
+//   try {
+//     const response = await fetch(form.action, {
+//       method: "POST",
+//       body: new FormData(form),
+//       headers: {
+//         'Accept': 'application/json'
+//       }
+//     });
+//     const data = await response.json();
+//     console.log("Web3Forms Response:", data);
+
+//     loading.style.display = "none";
+
+//     if (response.ok) {
+//       sentMessage.style.display = "block";
+//       form.reset();
+//     } else {
+//       const data = await response.json();
+//       errorMessage.textContent = data.message || "There was an error submitting the form.";
+//       errorMessage.style.display = "block";
+//     }
+//   } catch (error) {
+//     loading.style.display = "none";
+//     errorMessage.textContent = "Something went wrong. Please try again.";
+//     errorMessage.style.display = "block";
+//   }
+// });
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent default form submission
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        const responseMessage = document.getElementById('responseMessage');
+        responseMessage.style.display = 'block';
+        if (data.success) {
+            responseMessage.textContent = 'Thank you for your submission! We will get back to you shortly.';
+            responseMessage.style.color = 'green';
+            form.reset(); // Optionally clear the form
+        } else {
+            responseMessage.textContent = 'There was an error. Please try again.';
+            responseMessage.style.color = 'red';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        const responseMessage = document.getElementById('responseMessage');
+        responseMessage.style.display = 'block';
+        responseMessage.textContent = 'An unexpected error occurred. Please try again later.';
+        responseMessage.style.color = 'red';
+    });
+});
+
+
+

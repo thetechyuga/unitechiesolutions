@@ -1587,8 +1587,11 @@
               <h3>Get In Touch</h3>
               <p>Fill out the form below and our team will get back to you shortly.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
-                data-aos-delay="200">
+              <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="9a325131-859e-44e1-b361-e092ad51bd66">
+                <input type="hidden" name="subject" value="New contact via website">
+                <input type="hidden" name="replyto" value="email">
+
                 <div class="row gy-4">
 
                   <div class="col-md-6">
@@ -1600,12 +1603,11 @@
                   </div>
 
                   <div class="col-12 col-lg-6">
-                    <input type="tel" name="contact" class="form-control" placeholder="Your Contact No." maxlength="10"
-                      required>
+                    <input type="tel" name="phone" class="form-control" placeholder="Your Contact No." maxlength="10" required>
                   </div>
 
                   <div class="col-12 col-lg-6">
-                    <input type="text" name="subject" class="form-control" placeholder="Subject" required>
+                    <input type="text" name="querysubject" class="form-control" placeholder="Subject" required>
                   </div>
 
                   <div class="col-12">
@@ -1613,15 +1615,17 @@
                   </div>
 
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                    <div id="loading" style="display:none;">Loading...</div>
+                    <div id="error-message" style="color:red; display:none;"></div>
+                    <div id="sent-message" style="color:green; display:none;">Your message has been sent. Thank you!</div>
 
                     <button type="submit" class="btn">Send Message</button>
                   </div>
 
                 </div>
               </form>
+              <div id="responseMessage" style="display:none;"></div>
+
 
             </div>
           </div>
