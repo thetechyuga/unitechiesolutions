@@ -819,7 +819,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding-top: 121px;
+  /* padding-top: 121px; */
   position: relative;
   overflow: hidden;
   padding-bottom: 119px;
@@ -4175,3 +4175,4 @@ section,
 .contact-2 .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
+
