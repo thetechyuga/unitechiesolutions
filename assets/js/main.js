@@ -99,10 +99,19 @@
       duration: 600,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
+      offset: 100,
     });
   }
-  window.addEventListener('load', aosInit);
+  // window.addEventListener('load', aosInit);
+  window.addEventListener('load', () => {
+  aosInit();
+
+  // Manually refresh AOS to catch elements that loaded late
+  setTimeout(() => {
+    AOS.refreshHard(); // Ensures AOS recalculates positions after full load
+  }, 300);
+});
 
   /**
    * Initiate Pure Counter
